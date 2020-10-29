@@ -1,24 +1,31 @@
 package com.zaycodes;
-import java.util.Scanner;
+import java.util.*;
 public class Main {
 
-    public static void main(String[] args) {
-	// write your code here
-        public class Hangman{
-                //Scanner object and variables
-                Scanner input = new scanner(System.in);
-                int guessCount;
-                int correctGuesses;
-                String toPlay, guessWord;
-                String[] hangMan = new String[] {"Head","Body","L.Arm","R.Arm", "L.Leg","R.Leg"};
+        static Scanner input;
+        static String name;
+        int guessCount;
+        int correctGuesses;
+        static String toPlay;
+        String guessWord;
+        String[] hangMan = new String[]{"Head", "Body", "L.Arm", "R.Arm", "L.Leg", "R.Leg"};
+        String [] guessWords = new String[]{"blackjack","mezzanine","unpuzzles","equalized", "jacquards","kickboxer","highjinks","oxidizing","applejack", "checkbook"};
 
-                System.out.println("Please save me from the hangman's noose?! (0o0)");
-                 {
-                    System.out.println("Do you wish to play a game?(Muahahaha)");
-                    System.out.println("Choose: Y/y/N/n");
-                    toPlay = input.next();
-                 if (toPlay != "Y" || "y" || "N" || "n"){
+    public static void main(String[] args) {
+        // write your code here
+                System.out.println("Hi! Welcome to hangman!");
+                System.out.println("What is your name?");
+                name = input.next();
+                System.out.println("Would you like to play a game?");
+
+                toPlay = input.next();
+                if (toPlay != "Y" || toPlay!= "y" || toPlay!= "N" || toPlay!= "n") {
                     System.out.println("That's not an option! Try again");
+
+                } else if (toPlay == "Y" || toPlay == "y"){
+                    System.out.println("Ok, " + name + ". Will you save a life today?");
+                } else if (toPlay == "N" || toPlay == "n"){
+                    System.exit(0);
                 }
 
 
@@ -38,12 +45,12 @@ public class Main {
                 //if char incorrect code
 
                 //Give
-                     //new comment
+                //new comment
 
-            }
+
         }
 
 
-
     }
+
 
